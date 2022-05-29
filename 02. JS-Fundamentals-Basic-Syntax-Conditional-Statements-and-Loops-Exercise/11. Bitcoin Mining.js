@@ -18,16 +18,16 @@ function bitcoinMining(input) {
         while (myMoney > priceBitcoin) {
             myMoney -= priceBitcoin;
             myBitcoin++;
-            if(dayOfTheFirst === 0) {
+            if (dayOfTheFirst === 0) {
                 dayOfTheFirst = day
             }
         }
 
     }
-console.log(`Bought bitcoins: ${myBitcoin}`)
-if (myBitcoin > 0) {
-    console.log(`Day of the first purchased bitcoin: ${dayOfTheFirst}`)
-}
-console.log(`Left money: ${myMoney.toFixed(2)} lv.`)
+    console.log(`Bought bitcoins: ${myBitcoin}`)
+    if (myBitcoin > 0) {
+        console.log(`Day of the first purchased bitcoin: ${dayOfTheFirst}`)
+    }
+    console.log(`Left money: ${myMoney.toFixed(2)} lv.`)
 }
 bitcoinMining([50, 100])
