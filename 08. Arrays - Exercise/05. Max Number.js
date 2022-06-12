@@ -18,5 +18,5 @@ function maxNumber(array) {
 
     console.log(newArray.join(' '));
 }
-maxNumber([4, 4, 3, 2])
+//maxNumber([4, 4, 3, 2])
 maxNumber([14, 24, 3, 19, 15, 17])
