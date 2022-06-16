@@ -12,7 +12,7 @@ function numbers(input) {
             result.push(num);
         }
     }
-    console.log(result.sort(function(a, b){return a - b}));
+    console.log(result);
 
 }
 numbers('10 20 30 40 50')
