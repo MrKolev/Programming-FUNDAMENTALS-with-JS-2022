@@ -1,18 +1,21 @@
 function numbers(input) {
-    let array = input.split(" ");
-    let sumAllNum = 0;
-    let result = [];
-    let printResult = [];
-    for (let num of array) {
-        sumAllNum += Number(num);
+    let array = input.split(" ").map(Number);
+    let average = 0;
+    for (let el of array) {
+        average += el
     }
-    let averageNumbe = sumAllNum / array.length
-    for (let num of array) {
-        if (Number(num) > averageNumbe) {
-            result.push(num);
+    average /= array.length;
+
+    let result = [];
+    for (let el of array) {
+        if (el > average) {
+            result.push(el);
         }
     }
-    console.log(result);
-
+    let sortedArray = result.sort((a, b) => b - a).slice(0, 5);
+    if (sortedArray.length == 0) {
+        return "No"
+    }
+    return sortedArray.join(" ")
 }
-numbers('10 20 30 40 50')
+console.log(numbers('1 3 6 7 22 4 34 67 5 64 5 6'))
