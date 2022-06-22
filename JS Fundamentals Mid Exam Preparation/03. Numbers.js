@@ -5,17 +5,12 @@ function numbers(input) {
         average += el
     }
     average /= array.length;
+    let result = array.filter(x => x > average);
 
-    let result = [];
-    for (let el of array) {
-        if (el > average) {
-            result.push(el);
-        }
-    }
     let sortedArray = result.sort((a, b) => b - a).slice(0, 5);
     if (sortedArray.length == 0) {
         return "No"
     }
     return sortedArray.join(" ")
 }
-console.log(numbers('1 3 6 7 22 4 34 67 5 64 5 6'))
+console.log(numbers('-1 -2 -3 -4 -5 -6'))
